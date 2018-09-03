@@ -1,0 +1,11 @@
+[Unit]
+Description=Minsys Service
+After network.target=minsys.service
+
+[Service]
+Type=forking
+ExecStart=/etc/ranmgr/minsys.sh start
+ExecStop=/etc/ranmgr/minsys.sh stop
+
+[Install]
+WantedBy=multi-user.target
